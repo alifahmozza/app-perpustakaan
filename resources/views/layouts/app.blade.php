@@ -18,6 +18,9 @@
         .btn { display: inline-block; padding: 6px 14px; background: #2563eb; color: #fff; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; }
         form.inline { display: inline; }
         footer { text-align: center; padding: 20px; color: #6b7280; font-size: 14px; border-top: 1px solid #e5e7eb; margin-top: 40px; }
+        .status-dikembalikan {background-color: #d4edda; color: #155724; padding: 4px 8px; border-radius: 4px;}
+        .status-dipinjam {background-color: #fff3cd; color: #856404; padding: 4px 8px; border-radius: 4px;}
+        .status-terlambat {background-color: #f8d7da; color: #721c24; padding: 4px 8px; border-radius: 4px;}
     </style>
 </head>
 <body>
