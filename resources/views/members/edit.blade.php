@@ -37,28 +37,28 @@
             <div class="error">{{ $message }}</div>
         @enderror
 
-        <label for="nomor_telepon">Nomor Telepon (opsional)</label>
+        <label for="nomor_telepon">Nomor Telepon</label>
         <input type="text" name="nomor_telepon" id="nomor_telepon" value="{{ old('nomor_telepon', $member->nomor_telepon) }}">
         @error('nomor_telepon')
             <div class="error">{{ $message }}</div>
         @enderror
 
-        <label for="alamat">Alamat (opsional)</label>
-        <textarea name="alamat" id="alamat" rows="4">{{ old('alamat', $member->alamat) }}</textarea>
+        <label for="alamat">Alamat</label>
+        <textarea name="alamat" id="alamat" rows="3">{{ old('alamat', $member->alamat) }}</textarea>
         @error('alamat')
             <div class="error">{{ $message }}</div>
         @enderror
 
         <label for="status">Status</label>
         <select name="status" id="status">
-            <option value="aktif" {{ old('status', $member->status) == 'aktif' ? 'selected' : '' }}>Aktif</option>
-            <option value="nonaktif" {{ old('status', $member->status) == 'nonaktif' ? 'selected' : '' }}>Nonaktif</option>
+            <option value="aktif" @selected(old('status', $member->status) == 'aktif')>Aktif</option>
+            <option value="nonaktif" @selected(old('status', $member->status) == 'nonaktif')>Nonaktif</option>
         </select>
         @error('status')
             <div class="error">{{ $message }}</div>
         @enderror
 
-        <button type="submit" class="btn">Update Anggota</button>
+        <button type="submit" class="btn">Perbarui Data Anggota</button>
     </form>
 </body>
 </html>

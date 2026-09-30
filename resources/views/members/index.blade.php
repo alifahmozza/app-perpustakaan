@@ -42,7 +42,7 @@
                         <form action="{{ route('members.destroy', $member->id) }}" method="POST" style="display: inline;">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" onclick="return confirm('Apakah Anda yakin ingin menghapus anggota ini?')">Hapus</button>
+                            <button type="submit">Hapus</button>
                         </form>
                     </td>
                 </tr>
@@ -54,5 +54,5 @@
         </tbody>
     </table>
 
-    {{ $members->appends(request()->query())->links() }}
+    {{ $members->links() }}
 @endsection

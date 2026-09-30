@@ -36,22 +36,22 @@
             <div class="error">{{ $message }}</div>
         @enderror
 
-        <label for="nomor_telepon">Nomor Telepon (opsional)</label>
+        <label for="nomor_telepon">Nomor Telepon</label>
         <input type="text" name="nomor_telepon" id="nomor_telepon" value="{{ old('nomor_telepon') }}">
         @error('nomor_telepon')
             <div class="error">{{ $message }}</div>
         @enderror
 
-        <label for="alamat">Alamat (opsional)</label>
-        <textarea name="alamat" id="alamat" rows="4">{{ old('alamat') }}</textarea>
+        <label for="alamat">Alamat</label>
+        <textarea name="alamat" id="alamat" rows="3">{{ old('alamat') }}</textarea>
         @error('alamat')
             <div class="error">{{ $message }}</div>
         @enderror
 
         <label for="status">Status</label>
         <select name="status" id="status">
-            <option value="aktif" {{ old('status') == 'aktif' ? 'selected' : '' }}>Aktif</option>
-            <option value="nonaktif" {{ old('status') == 'nonaktif' ? 'selected' : '' }}>Nonaktif</option>
+            <option value="aktif" @selected(old('status', 'aktif') == 'aktif')>Aktif</option>
+            <option value="nonaktif" @selected(old('status', 'nonaktif') == 'nonaktif')>Nonaktif</option>
         </select>
         @error('status')
             <div class="error">{{ $message }}</div>
