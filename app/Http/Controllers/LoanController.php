@@ -21,10 +21,7 @@ class LoanController extends Controller
     {
         $members = Member::all();
         $books = Book::all();
-        $users = [
-            ['id' => 1, 'name' => 'Arya'],
-            ['id' => 2, 'name' => 'Furqon'],
-        ];
+        $users = user::all();
 
         return view('loans.create', compact('members', 'books', 'users'));
     }
