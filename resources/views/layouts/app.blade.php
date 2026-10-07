@@ -21,6 +21,9 @@
         .status-dikembalikan {background-color: #d4edda; color: #155724; padding: 4px 8px; border-radius: 4px;}
         .status-dipinjam {background-color: #fff3cd; color: #856404; padding: 4px 8px; border-radius: 4px;}
         .status-terlambat {background-color: #f8d7da; color: #721c24; padding: 4px 8px; border-radius: 4px;}
+        nav .navbar-user { display: flex; align-items: center; gap: 12px; color: #cbd5e1; font-size: 14px; }
+        nav .btn-logout { background: none; border: 1px solid #cbd5e1; color: #cbd5e1; padding: 4px 10px; border-radius: 4px; cursor: pointer; font-size: 14px; }
+        nav .btn-logout:hover { background: #1e40af; color: #fff; }
     </style>
 </head>
 <body>
