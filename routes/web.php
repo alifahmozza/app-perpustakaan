@@ -6,6 +6,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LoanController;
 use App\Http\Controllers\MemberController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
 
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
@@ -24,6 +25,8 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('loans', LoanController::class);
     Route::put('/loans/{id}/kembalikan', [LoanController::class, 'kembalikan'])
         ->name('loans.kembalikan');
+    Route::get('/profil', [ProfileController::class, 'show'])->name('profil.show');
+    Route::put('/profil/password', [ProfileController::class, 'updatePassword'])->name('profil.password.update');
 });
 
 
